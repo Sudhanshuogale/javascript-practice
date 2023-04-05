@@ -201,11 +201,10 @@
 
       // const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 
-      // const countedNames = names.reduce((allNames, name) => {
-      //   const currCount = allNames[name] ?? 0;
+      // const countedNames = names.reduce((acc, name) => {
       //   return {
-      //     ...allNames,
-      //     [name]: currCount + 1,
+      //     ...acc,
+      //     [name]: (acc[name] ?? 0) + 1,
       //   };
       // }, {});
       // console.log(countedNames);
@@ -262,6 +261,9 @@
       //   };
       // }, {});
 
+      // let res = Object.entries(result).flat();
+      // console.log(res);
+
       // const folder=["index.js",["flat.js","map.js"],["any.js",["all.js","count.js"]]];
 
       // function flatten(acc,item){
@@ -293,10 +295,10 @@
       //   },
       // ];
 
-      // const books = friends.reduce((acc, value)=>{
-      //     console.log(acc,value.books)
-      //     return [...acc, ...value.books]
-      // },[]);
+      // const books = friends.reduce((acc, value) => {
+      //   console.log(acc, value.books);
+      //   return [...acc, ...value.books];
+      // }, []);
       // console.log(books);
 
       // const ratings = [5, 4, 5];
@@ -369,54 +371,123 @@
       // });
       // console.log(newArr);
 
-      const employees = [
-        {
-          firstname: "Adam",
-          lastname: "Williams",
-          salary: 5000,
-          bonus: 500,
-          tax: 1000,
-        },
-        {
-          firstname: "Noah",
-          lastname: "Raider",
-          salary: 8000,
-          bonus: 1500,
-          tax: 2500,
-        },
-        {
-          firstname: "Fabiano",
-          lastname: "Marsh",
-          salary: 1500,
-          bonus: 500,
-          tax: 200,
-        },
-        {
-          firstname: "Alireza",
-          lastname: "Smith",
-          salary: 4500,
-          bonus: 1000,
-          tax: 900,
-        },
-      ];
+      // const employees = [
+      //   {
+      //     firstname: "Adam",
+      //     lastname: "Williams",
+      //     salary: 5000,
+      //     bonus: 500,
+      //     tax: 1000,
+      //   },
+      //   {
+      //     firstname: "Noah",
+      //     lastname: "Raider",
+      //     salary: 8000,
+      //     bonus: 1500,
+      //     tax: 2500,
+      //   },
+      //   {
+      //     firstname: "Fabiano",
+      //     lastname: "Marsh",
+      //     salary: 1500,
+      //     bonus: 500,
+      //     tax: 200,
+      //   },
+      //   {
+      //     firstname: "Alireza",
+      //     lastname: "Smith",
+      //     salary: 4500,
+      //     bonus: 1000,
+      //     tax: 900,
+      //   },
+      // ];
 
-      let newArr = employees.map((obj) => {
-        // newObj = {};
-        // newObj.name = `${obj.firstname} ${obj.lastname}`;
-        // newObj.netEarning = obj.salary + obj.bonus - obj.tax;
-        // return newObj;
+      // let newArr = employees.map((obj) => {
+      //   // newObj = {};
+      //   // newObj.name = `${obj.firstname} ${obj.lastname}`;
+      //   // newObj.netEarning = obj.salary + obj.bonus - obj.tax;
+      //   // return newObj;
 
-        return {
-          name: `${obj.firstname} ${obj.lastname}`,
-          netEarning: obj.salary + obj.bonus - obj.tax,
-        };
-      });
-      console.log(newArr);
+      //   return {
+      //     name: `${obj.firstname} ${obj.lastname}`,
+      //     netEarning: obj.salary + obj.bonus - obj.tax,
+      //   };
+      // });
+      // console.log(newArr);
 
-      const scores = { math: 50, English: 70, Physics: 45, Agric: 60 };
-      let newScores = Object.values(scores).map((score) => score + 5);
+      // const scores = { math: 50, English: 70, Physics: 45, Agric: 60 };
+      // let newScores = Object.values(scores).map((score) => score + 5);
 
-      console.log(newScores); // [55,75,50,65]
+      // console.log(newScores); // [55,75,50,65]
+
+      // let str = "Hello, How are you";
+
+      // let a = str.replace(/How/g, "_");
+      // console.log(a);
+
+      // let temp = str.split("o");
+      // console.log(temp);
+
+      // let str1 = "          Hariama go                ";
+      // console.log(str1.trimLeft());
+
+      // let arr = [11, 32, 45, 67, 19, 58];
+
+      // let pos = 2,
+      //   ele = 100;
+
+      // for (let i = arr.length - 1; i >= 0; --i) {
+      //   if (i >= pos) {
+      //     arr[i + 1] = arr[i];
+      //     if (i == pos) {
+      //       arr[i] = ele;
+      //     }
+      //   }
+      // }
+
+      // console.log(arr);
+
+      // let arr = [1, 2, 3, 45];
+      // let arr1 = ["1", "2", "3", "45"];
+
+      // let res = arr.map((item) => {
+      //   return item + "";
+      // });
+      // console.log(res);
+
+      // let res1 = arr1.map((item) => {
+      //   return parseInt(item);
+      // });
+      // console.log(res1);
+
+      // let arr = [12, 34, 56, 76, 89, 62, 80]; //function to print last n elements of an array
+      // let newArr = [];
+      // function countLast(num) {
+      //   let len = arr.length - 1 - num;
+      //   for (let i = len + 1; i < arr.length; ++i) {
+      //     newArr.push(arr[i]);
+      //     len++;
+      //   }
+      //   return newArr;
+      // }
+
+      // console.log(countLast(2));
+
+      // let arr = [12, 34, 56, 76, 89, 62, 80];
+
+      // function deletecount(num) {
+      //   //function to remove specific element in an array
+      //   for (let i = 0; i < arr.length; ++i) {
+      //     if (arr[i] == num) {
+      //       arr.splice(i, 1);
+      //     }
+      //   }
+      //   return arr;
+      // }
+      // console.log(deletecount(56));
+
+
+      
     </script>
   </body>
 </html>
