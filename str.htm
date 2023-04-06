@@ -72,10 +72,10 @@
       // console.log(palindrome("level"));
       // console.log(palindrome("hello"));
 
-      // let arr=[12,23,11,9,34,56,78];
-      // let x=Math.max(...arr);
-      // let y=Math.min(...arr);
-      // console.log([x,y]);
+      // let arry = [12, 23, 11, 9, 34, 56, 78];
+      // let x = Math.max(...arry);
+      // let y = Math.min(...arry);
+      // console.log([x, y]);
 
       // let array = [[0, 1], [2, 3], [4, 5], [6, 7, 8, 9]];
       // let flat = array.reduce((a, b)=> {
@@ -83,7 +83,7 @@
       //     });
       //     console.log(flat);
 
-      // let arr="How are you?"
+      // let arr = "How are you?";
       // console.log(arr.split());
       // console.log(arr.split(""));
       // console.log(arr.split(" "));
@@ -115,47 +115,47 @@
       // console.log(count(12));
       // console.log(count(567889));
 
-      // let obj={
-      //          name:"sai",
-      //          age:24,
-      //          class:12,
-      //          city:"Udaipur"
-      //         }
+      // let obj = {
+      //   name: "sai",
+      //   age: 24,
+      //   class: 12,
+      //   city: "Udaipur",
+      // };
 
-      // let a=Object.values(obj);
+      // let a = Object.values(obj);
       // console.log(a);
 
-      // let b=Object.keys(obj);
+      // let b = Object.keys(obj);
       // console.log(b);
 
-      // let c=Object.entries(obj);
+      // let c = Object.entries(obj);
       // console.log(c);
 
-      // let data=[1,3,45,21,5,21,42,53,42];
-      // let b=new Set(data);
+      // let data = [1, 3, 45, 21, 5, 21, 42, 53, 42];
+      // let b = new Set(data);
       // console.log([...b]);
 
-      // let dup=data.filter((item,index)=> (data.indexOf(item)!==index))
+      // let dup = data.filter((item, index) => data.indexOf(item) !== index);
       // console.log(dup);
 
-      // let str="crazy crazy brown fox jumps over a crazy frog";
-      // let word="crazy";
-      // console.log(str.indexOf(word,str.indexOf(word)+1));
+      // let str = "The crazy brown fox jumps over a crazy frog";
+      // let word = "crazy";
+      // console.log(str.indexOf(word, 10));
 
       // let sum=0;
       // numbers.map((num)=>{
       //   sum=sum+num;
       // })
-      // console.log(sum)
+      // // console.log(sum)
 
-      // let a=[1,21,1,1,3,4,5,3,5,3,5,3,5,2,1];
-      // console.log(new Set(a))
-      // console.log(...new Set(a))
-      // console.log([...new Set(a)])
+      // let a = [1, 21, 1, 1, 3, 4, 5, 3, 5, 3, 5, 3, 5, 2, 1];
+      // console.log(new Set(a));
+      // console.log(...new Set(a));
+      // console.log([...new Set(a)]);
 
       // const myArray = ["value1", "value2", 12];
       // const mySet = new Set(myArray);
-      // console.log(mySet)
+      // console.log(mySet);
 
       // function getVowels(string) {
       //        var Vowels = 'aAeEiIoOuU';
@@ -232,9 +232,10 @@
       // },0);
 
       // let result = people.reduce((acc, person) => {
-      //   console.log(acc, person.name);
       //   return [...acc, person.name];
       // }, []);
+
+      // console.log(result);
 
       // let result=people.reduce((acc,person)=>{
       //     return { ...acc,[person.id]:person}
@@ -254,7 +255,6 @@
       // },true);
 
       // let result = people.reduce((acc, person) => {
-      //   console.log(acc, [person.name], (acc[person.name] || 0) + 1);
       //   return {
       //     ...acc,
       //     [person.name]: (acc[person.name] || 0) + 1,
@@ -274,8 +274,6 @@
       //     return[...acc,item];
       // }
       //     let result=folder.reduce(flatten,[]);
-
-      // console.log(result);
 
       // const friends = [
       //   {
@@ -471,7 +469,7 @@
       //   return newArr;
       // }
 
-      // console.log(countLast(2));
+      // console.log(countLast(3));
 
       // let arr = [12, 34, 56, 76, 89, 62, 80];
 
@@ -485,6 +483,73 @@
       //   return arr;
       // }
       // console.log(deletecount(56));
+
+      // function palindrome(str) {
+      //   let len = str.length;
+      //   let flag = true;
+
+      //   for (let i = 0; i < len / 2; ++i) {
+      //     if (str[i].toLowerCase() !== str[len - 1 - i]) {
+      //       flag = false;
+      //       break;
+      //     }
+      //   }
+      //   if (flag) {
+      //     return true;
+      //   } else {
+      //     return false;
+      //   }
+      // }
+
+      // console.log(palindrome("Level"));
+      // console.log(palindrome("hello"));
+      // console.log(palindrome("A car,a man,a maraca"));
+
+      // let str = "A car,a man,a maraca";
+
+      // let x = str.replace(/\W/g, "").toLowerCase();
+      // console.log(x);
+      // let y = x.split("").reverse().join("");
+      // console.log(y);
+      // if (x == y) {
+      //   console.log("yes");
+      // }
+
+      // let arr = ["A", "B", "C", "A", "B", "A", "B", "A", "A"];
+
+      // let res = new Set(arr);
+      // console.log(arr);
+      // console.log(res);
+
+      // let final = [...res];
+      // console.log(final);
+
+      function longset(str) {
+        let x = [];
+        x = str.split(" ");
+        let max = x[0];
+        let result = x.map((element, i) => {
+          if (x[i].length > max.length) {
+            max = element;
+          }
+        });
+        return max;
+      }
+      console.log(longset("Just Believe in yourself"));
+
+      function palindrome(str) {
+        let tmp = str.replace(/\W/g, "").toLowerCase();
+        let rev = tmp.split("").reverse().join("");
+        if (tmp == rev) {
+          return "Palindrome";
+        } else {
+          return "Not Palindrome";
+        }
+      }
+
+      console.log(palindrome("Level"));
+      console.log(palindrome("A car,a man,a maraca"));
+      console.log(palindrome("Hello"));
 
 
       
